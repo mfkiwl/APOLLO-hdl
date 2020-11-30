@@ -250,7 +250,8 @@ module system_top (
   assign spi_csn_adrv9009_a = spi_3_to_8_csn[0];
   assign spi_csn_adrv9009_b = spi_3_to_8_csn[1];
   assign spi_csn_hmc7044 = spi_3_to_8_csn[2];
-  assign spi_csn_hmc7044_car = spi_3_to_8_csn[3];
+  assign adrv9009_gpio_03_a = spi_3_to_8_csn[3];
+  assign adrv9009_gpio_02_a = spi_3_to_8_csn[4];
 
   adrv9009zu11eg_spi i_spi (
   .spi_csn(spi_3_to_8_csn),
