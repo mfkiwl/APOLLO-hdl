@@ -111,8 +111,8 @@ module system_top (
 
   inout               adrv9009_gpio_00_a,
   inout               adrv9009_gpio_01_a,
-  inout               adrv9009_gpio_02_a,
-  inout               adrv9009_gpio_03_a,
+  out                 adrv9009_gpio_02_a,
+  out                 adrv9009_gpio_03_a,
   inout               adrv9009_gpio_04_a,
   inout               adrv9009_gpio_05_a,
   inout               adrv9009_gpio_06_a,
@@ -250,8 +250,8 @@ module system_top (
   assign spi_csn_adrv9009_a = spi_3_to_8_csn[0];
   assign spi_csn_adrv9009_b = spi_3_to_8_csn[1];
   assign spi_csn_hmc7044 = spi_3_to_8_csn[2];
-  assign adrv9009_gpio_03_a = spi_3_to_8_csn[3];
-  assign adrv9009_gpio_02_a = spi_3_to_8_csn[4];
+  assign adrv9009_gpio_02_a = spi_3_to_8_csn[3];
+  assign adrv9009_gpio_03_a = spi_3_to_8_csn[4];
 
   adrv9009zu11eg_spi i_spi (
   .spi_csn(spi_3_to_8_csn),
@@ -268,9 +268,9 @@ module system_top (
   assign gpio_i[21:20] = gpio_o[21:20];
 
   ad_iobuf #(.DATA_WIDTH(58)) i_iobuf (
-    .dio_t ({gpio_t[89:32]}),
-    .dio_i ({gpio_o[89:32]}),
-    .dio_o ({gpio_i[89:32]}),
+    .dio_t ({gpio_t[89:36]}),
+    .dio_i ({gpio_o[89:36]}),
+    .dio_o ({gpio_i[89:36]}),
     .dio_p ({
               hmc7044_gpio_4,           // 89
               hmc7044_gpio_3,           // 88
@@ -325,9 +325,13 @@ module system_top (
               adrv9009_gpio_07_a,       // 39
               adrv9009_gpio_06_a,       // 38
               adrv9009_gpio_05_a,       // 37
-              adrv9009_gpio_04_a,       // 36
-              adrv9009_gpio_03_a,       // 35
-              adrv9009_gpio_02_a,       // 34
+              adrv9009_gpio_04_a}))       // 36
+  
+  ad_iobuf #(.DATA_WIDTH(2)) i_iobuf_1 (
+    .dio_t ({gpio_t[33:32]}),
+    .dio_i ({gpio_o[33:32]}),
+    .dio_o ({gpio_i[33:32]}),
+    .dio_p ({
               adrv9009_gpio_01_a,       // 33
               adrv9009_gpio_00_a}));    // 32
 
