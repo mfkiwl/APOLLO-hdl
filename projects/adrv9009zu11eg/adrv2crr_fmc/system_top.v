@@ -111,8 +111,8 @@ module system_top (
 
   inout               adrv9009_gpio_00_a,
   inout               adrv9009_gpio_01_a,
-  out                 adrv9009_gpio_02_a,
-  out                 adrv9009_gpio_03_a,
+  output              adrv9009_gpio_02_a,
+  output              adrv9009_gpio_03_a,
   inout               adrv9009_gpio_04_a,
   inout               adrv9009_gpio_05_a,
   inout               adrv9009_gpio_06_a,
