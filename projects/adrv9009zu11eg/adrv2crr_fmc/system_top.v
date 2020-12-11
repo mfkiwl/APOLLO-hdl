@@ -325,7 +325,7 @@ module system_top (
               adrv9009_gpio_07_a,       // 39
               adrv9009_gpio_06_a,       // 38
               adrv9009_gpio_05_a,       // 37
-              adrv9009_gpio_04_a}))       // 36
+              adrv9009_gpio_04_a}));       // 36
   
   ad_iobuf #(.DATA_WIDTH(2)) i_iobuf_1 (
     .dio_t ({gpio_t[33:32]}),
