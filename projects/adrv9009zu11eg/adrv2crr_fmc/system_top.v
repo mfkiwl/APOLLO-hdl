@@ -243,6 +243,7 @@ module system_top (
       3'h1: spi_3_to_8_csn = 8'b11111101;
       3'h2: spi_3_to_8_csn = 8'b11111011;
       3'h3: spi_3_to_8_csn = 8'b11110111;
+      3'h4: spi_3_to_8_csn = 8'b11101111;
       default: spi_3_to_8_csn = 8'b11111111;
     endcase
   end
@@ -325,15 +326,20 @@ module system_top (
               adrv9009_gpio_07_a,       // 39
               adrv9009_gpio_06_a,       // 38
               adrv9009_gpio_05_a,       // 37
-              adrv9009_gpio_04_a}));       // 36
+              adrv9009_gpio_04_a,       // 36
+              adrv9009_gpio_03_a,       // 35
+              adrv9009_gpio_02_a,       // 34
+              adrv9009_gpio_01_a,       // 33
+              adrv9009_gpio_00_a}));    // 32
   
-  ad_iobuf #(.DATA_WIDTH(2)) i_iobuf_1 (
+  /*ad_iobuf #(.DATA_WIDTH(2)) i_iobuf_1 (
     .dio_t ({gpio_t[33:32]}),
     .dio_i ({gpio_o[33:32]}),
     .dio_o ({gpio_i[33:32]}),
     .dio_p ({
               adrv9009_gpio_01_a,       // 33
               adrv9009_gpio_00_a}));    // 32
+             */
 
   ad_iobuf #(.DATA_WIDTH(6)) i_carrier_iobuf_0 (
     .dio_t ({gpio_t[27:22]}),
