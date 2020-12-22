@@ -9,6 +9,7 @@ set sys_zynq 2
 adi_project adrv9009zu11eg
 adi_project_files adrv9009zu11eg [list \
   "system_top.v" \
+  "ltc2983_constr.xdc" \
   "../common/adrv9009zu11eg_spi.v" \
   "../common/adrv9009zu11eg_constr.xdc" \
   "../common/adrv2crr_fmc_constr.xdc" \
