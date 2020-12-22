@@ -268,7 +268,7 @@ module system_top (
   assign gpio_i[31:28] = gpio_o[31:28];
   assign gpio_i[21:20] = gpio_o[21:20];
   
-  assign gpio_i[35:34] = gpio_o[35:34];
+  //assign gpio_i[35:34] = gpio_o[35:34];
   
   assign gpio_o[34] = spi_3_to_8_csn[3];
   assign gpio_o[35] = spi_3_to_8_csn[4];
