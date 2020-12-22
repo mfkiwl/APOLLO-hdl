@@ -242,7 +242,7 @@ module system_top (
   wire            spi0_miso;
 
   reg  [7:0]     spi_3_to_8_csn;
-  reg  [7:0]     ltcspi_3_to_8_csn;
+  reg  [7:0]     ltc_spi_3_to_8_csn;
   
   wire  [2:0]     ltc_spi_csn;
   wire            ltc_spi_mosi;
