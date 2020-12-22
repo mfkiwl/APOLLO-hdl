@@ -253,8 +253,8 @@ module system_top (
       3'h0: spi_3_to_8_csn = 8'b11111110;
       3'h1: spi_3_to_8_csn = 8'b11111101;
       3'h2: spi_3_to_8_csn = 8'b11111011;
-      3'h3: spi_3_to_8_csn = 8'b11110111;
-      3'h4: spi_3_to_8_csn = 8'b11101111;
+      //3'h3: spi_3_to_8_csn = 8'b11110111;
+      //3'h4: spi_3_to_8_csn = 8'b11101111;
       default: spi_3_to_8_csn = 8'b11111111;
     endcase
   end
