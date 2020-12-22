@@ -263,7 +263,7 @@ module system_top (
     case (ltc_spi_csn)
       3'h0: ltc_spi_3_to_8_csn = 8'b11111110;
       3'h1: ltc_spi_3_to_8_csn = 8'b11111101;
-      default: spi_3_to_8_csn = 8'b11111111;
+      default: ltc_spi_3_to_8_csn = 8'b11111111;
     endcase
   end
 
