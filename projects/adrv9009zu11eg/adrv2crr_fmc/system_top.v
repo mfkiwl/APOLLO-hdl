@@ -554,7 +554,7 @@ module system_top (
     .spi0_csn(spi_csn),
     .spi0_miso(spi0_miso),
     .spi0_mosi(spi_mosi),
-    .spi0_sclk(spi_clk)
+    .spi0_sclk(spi_clk),
     
     .spi1_csn(ltc_spi_csn),
     .spi1_miso(ltc_spi0_miso),
